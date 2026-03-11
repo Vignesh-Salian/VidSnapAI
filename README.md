@@ -173,9 +173,24 @@ Browse all your generated video snaps in a beautiful gallery view.
 
 ## 📸 Screenshots
 
-![Landing Page](images/landing.png)
-![Snap Studio](images/studio.png)
-![Gallery](images/gallery.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="33%">
+        <b>Landing Page</b><br>
+        <img src="images/landing.png" alt="Landing Page">
+      </td>
+      <td align="center" width="33%">
+        <b>Snap Studio</b><br>
+        <img src="images/studio.png" alt="Snap Studio">
+      </td>
+      <td align="center" width="33%">
+        <b>Gallery</b><br>
+        <img src="images/gallery.png" alt="Gallery">
+      </td>
+    </tr>
+  </table>
+</div>
 
 ---
 
