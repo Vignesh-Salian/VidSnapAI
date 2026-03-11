@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}Snap Studio — VidSnapAI{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/create.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="vs-studio-section">
+    <div class="container">
+        <div class="vs-studio-container">
+            <div class="vs-studio-header">
+                <i class="fas fa-wand-magic-sparkles vs-studio-icon"></i>
+                <h1 class="vs-studio-title">Snap Studio</h1>
+                <p class="vs-studio-desc">Upload your video clips and add voiceover text. Our AI will craft the perfect
+                    snap for you.</p>
+            </div>
+
+            <form action="/studio" enctype="multipart/form-data" method="post" class="vs-studio-form" id="snapForm">
+                <div class="vs-upload-zone" id="uploadZone">
+                    <div class="vs-upload-inner">
+                        <i class="fas fa-cloud-arrow-up vs-upload-icon"></i>
+                        <p class="vs-upload-label">Drop your video files here or click to browse</p>
+                    </div>
+                    <div id="vsFileInputs">
+                        <div class="vs-file-row">
+                            <input name="file1" type="file" class="vs-file-input" accept="image/*,video/*" />
+                            <input name="uuid" type="hidden" value="{{myid}}">
+                            <button type="button" class="vs-remove-btn" onclick="vsRemoveFile(this)" disabled>
+                                <i class="fas fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="button" class="vs-add-file-btn" onclick="vsAddFile()">
+                        <i class="fas fa-plus"></i> Add Another Clip
+                    </button>
+                </div>
+
+                <div class="vs-voiceover-section">
+                    <label for="voiceoverText" class="vs-label">
+                        <i class="fas fa-microphone-lines"></i> Voiceover Script
+                    </label>
+                    <textarea class="vs-textarea" id="voiceoverText" name="text"
+                        placeholder="Type the text you'd like our AI to narrate over your snap..." rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="vs-generate-btn" id="generateBtn">
+                    <i class="fas fa-bolt"></i> Generate Snap
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    let vsFileCount = 2;
+
+    function vsAddFile() {
+        const container = document.getElementById('vsFileInputs');
+        const row = document.createElement('div');
+        row.className = 'vs-file-row';
+        row.innerHTML = `
+            <input name="file${vsFileCount}" type="file" class="vs-file-input" accept="image/*,video/*" />
+            <button type="button" class="vs-remove-btn" onclick="vsRemoveFile(this)">
+                <i class="fas fa-xmark"></i>
+            </button>
+        `;
+        container.appendChild(row);
+        vsFileCount++;
+    }
+
+    function vsRemoveFile(btn) {
+        btn.parentElement.remove();
+    }
+</script>
+{% endblock %}

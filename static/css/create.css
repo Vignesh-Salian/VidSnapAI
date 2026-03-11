@@ -1,0 +1,269 @@
+/* ═══════════════════════════════════════════
+   VidSnapAI — Snap Studio Styles
+   ═══════════════════════════════════════════ */
+
+.vs-studio-section {
+    padding: 4rem 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.vs-studio-container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: var(--vs-bg-glass);
+    border: 1px solid var(--vs-border);
+    border-radius: 24px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.vs-studio-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.vs-studio-icon {
+    font-size: 2.5rem;
+    background: var(--vs-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.8rem;
+    display: inline-block;
+}
+
+.vs-studio-title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.vs-studio-desc {
+    color: var(--vs-text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ── Upload Zone ───────────────────────── */
+.vs-upload-zone {
+    border: 2px dashed rgba(0, 212, 170, 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.vs-upload-zone:hover {
+    border-color: var(--vs-primary);
+    background: rgba(0, 212, 170, 0.03);
+}
+
+.vs-upload-inner {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.vs-upload-icon {
+    font-size: 2.5rem;
+    color: var(--vs-primary);
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+.vs-upload-label {
+    color: var(--vs-text-muted);
+    font-size: 0.95rem;
+}
+
+.vs-file-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.vs-file-input {
+    flex: 1;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--vs-border);
+    border-radius: 10px;
+    color: var(--vs-text);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+}
+
+.vs-file-input:hover,
+.vs-file-input:focus {
+    border-color: var(--vs-primary);
+    outline: none;
+}
+
+.vs-file-input::file-selector-button {
+    background: var(--vs-gradient);
+    color: #0B0F19;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin-right: 12px;
+    transition: opacity 0.3s ease;
+}
+
+.vs-file-input::file-selector-button:hover {
+    opacity: 0.85;
+}
+
+.vs-remove-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    background: rgba(239, 68, 68, 0.1);
+    color: #EF4444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.vs-remove-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: #EF4444;
+}
+
+.vs-remove-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.vs-add-file-btn {
+    background: rgba(0, 212, 170, 0.08);
+    border: 1px solid rgba(0, 212, 170, 0.2);
+    color: var(--vs-primary);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.vs-add-file-btn:hover {
+    background: rgba(0, 212, 170, 0.15);
+    border-color: var(--vs-primary);
+}
+
+.vs-add-file-btn i {
+    margin-right: 4px;
+}
+
+/* ── Voiceover Section ─────────────────── */
+.vs-voiceover-section {
+    margin-bottom: 2rem;
+}
+
+.vs-label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    color: var(--vs-text);
+}
+
+.vs-label i {
+    color: var(--vs-primary);
+    margin-right: 6px;
+}
+
+.vs-textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--vs-border);
+    border-radius: 12px;
+    color: var(--vs-text);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    resize: vertical;
+    min-height: 110px;
+    line-height: 1.6;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vs-textarea:hover {
+    border-color: rgba(0, 212, 170, 0.4);
+}
+
+.vs-textarea:focus {
+    outline: none;
+    border-color: var(--vs-primary);
+    box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.1);
+}
+
+.vs-textarea::placeholder {
+    color: var(--vs-text-muted);
+}
+
+/* ── Generate Button ───────────────────── */
+.vs-generate-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: var(--vs-gradient);
+    color: #0B0F19;
+    border: none;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.vs-generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 212, 170, 0.25);
+}
+
+.vs-generate-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ── Responsive ────────────────────────── */
+@media (max-width: 768px) {
+    .vs-studio-container {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .vs-studio-title {
+        font-size: 1.6rem;
+    }
+
+    .vs-file-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .vs-remove-btn {
+        align-self: flex-end;
+    }
+}

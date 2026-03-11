@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}VidSnapAI — Turn Your Videos into Viral Snaps{% endblock %}
+
+{% block content %}
+<section class="vs-hero">
+    <div class="vs-hero-bg"></div>
+    <div class="container vs-hero-inner">
+        <div class="vs-hero-badge">
+            <i class="fas fa-sparkles"></i> AI-Powered Video Platform
+        </div>
+        <h1 class="vs-hero-title">Turn Your Videos into<br><span class="vs-gradient-text">Viral Snaps</span></h1>
+        <p class="vs-hero-subtitle">Upload raw footage and let our AI craft perfectly edited short-form videos with
+            voiceovers, transitions, and trending effects.</p>
+        <a href="/studio" class="vs-cta-btn">
+            <i class="fas fa-rocket"></i> Launch Snap Studio
+        </a>
+    </div>
+</section>
+
+<section class="vs-features">
+    <div class="container">
+        <h2 class="vs-section-title">Why VidSnapAI?</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="vs-feature-card">
+                    <div class="vs-feature-icon-wrap">
+                        <i class="fas fa-scissors"></i>
+                    </div>
+                    <h3>Smart Clip Engine</h3>
+                    <p>AI automatically detects the most engaging moments in your footage and trims them into perfect
+                        clips.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="vs-feature-card">
+                    <div class="vs-feature-icon-wrap">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>AI Scene Detection</h3>
+                    <p>Intelligent scene analysis identifies transitions, faces, objects, and action sequences
+                        automatically.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="vs-feature-card">
+                    <div class="vs-feature-icon-wrap">
+                        <i class="fas fa-microphone-lines"></i>
+                    </div>
+                    <h3>Voiceover Studio</h3>
+                    <p>Transform your text into natural-sounding voiceovers with AI-generated speech in multiple styles.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="vs-showcase">
+    <div class="container">
+        <h2 class="vs-section-title">Trending Snaps</h2>
+        <div class="vs-image-grid">
+            <div class="vs-image-card">
+                <img src="{{ url_for('static', filename='1.jpg') }}" alt="AI Generated Snap 1" class="vs-showcase-img">
+                <div class="vs-image-overlay"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="vs-image-card">
+                <img src="{{ url_for('static', filename='2.jpg') }}" alt="AI Generated Snap 2" class="vs-showcase-img">
+                <div class="vs-image-overlay"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="vs-image-card">
+                <img src="{{ url_for('static', filename='3.jpg') }}" alt="AI Generated Snap 3" class="vs-showcase-img">
+                <div class="vs-image-overlay"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="vs-image-card">
+                <img src="{{ url_for('static', filename='4.jpg') }}" alt="AI Generated Snap 4" class="vs-showcase-img">
+                <div class="vs-image-overlay"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="vs-image-card">
+                <img src="{{ url_for('static', filename='5.jpg') }}" alt="AI Generated Snap 5" class="vs-showcase-img">
+                <div class="vs-image-overlay"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}My Snaps — VidSnapAI{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container vs-snaps-container">
+    <h1 class="vs-snaps-title">My Snaps</h1>
+    <p class="vs-snaps-subtitle">Your AI-generated video snaps, ready to share with the world.</p>
+    <div class="vs-snaps-grid">
+        {% for reel in reels %}
+        <video src="/static/reels/{{reel}}" controls></video>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
